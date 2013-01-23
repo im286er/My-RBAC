@@ -30,5 +30,6 @@ return array(
     'RBAC_USER_TABLE'           =>  'think_role_user',
     'RBAC_ACCESS_TABLE'         =>  'think_access',
     'RBAC_NODE_TABLE'           =>  'think_node',
-    'SHOW_PAGE_TRACE'           =>  1//显示调试信息
+    'SHOW_PAGE_TRACE'           =>  1,//显示调试信息
+	'DEFAULT_THEME'			    =>  '',  //不使用模板主题
 );

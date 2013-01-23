@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title></title>
-        <link rel='stylesheet' type='text/css' href='__PUBLIC__/css/style.css'>
+        <link rel='stylesheet' type='text/css' href='__PUBLIC__/Css/style.css'>
             <style>
                 html{overflow-x : hidden;}
             </style>
@@ -25,7 +25,7 @@
                             <neq name="item['name']|strtolower" value="index" >
                                 <eq name="item['access']" value="1" >
                                     <tr class="row " >
-                                        <td><div style="margin:0px 5px"><img SRC="../Public/Images/comment.gif" WIDTH="9" HEIGHT="9" BORDER="0" align="absmiddle" ALT=""> <a href="__APP__/{$item['name']}/index/" id="{$key}">{$item['title']}</a></div></td>
+                                        <td><div style="margin:0px 5px"><img SRC="../Public/images/comment.gif" WIDTH="9" HEIGHT="9" BORDER="0" align="absmiddle" ALT=""> <a href="__APP__/{$item['name']}/index/" id="{$key}">{$item['title']}</a></div></td>
                                     </tr>
                                 </eq>
                             </neq>
@@ -44,7 +44,7 @@
 		parent.main.document.location = url;
 	}
 
-	if (document.getElementsByTagName("a")[0].href)
+	if (document.getElementsByTagName("a")[0] && document.getElementsByTagName("a")[0].href)
 	{
 refreshMainFrame(document.getElementsByTagName("a")[0].href);		
 	}

@@ -188,9 +188,12 @@ function getSelectCheckboxValues(){
 }
 
 
- function   change()   
+ function   change(eventTag)   
   {   
-	  var   oObj   =   event.srcElement;   
+	  //var   oObj   =   event.srcElement;   
+	  var event=eventTag||window.event;
+	  var oObj=event.srcElement||event.target;
+	  //Justin Qian 修改于2013-1-23 兼容遵守W3C DOM的FF
 	  if(oObj.tagName.toLowerCase()   ==   "td")   
 	  {   
 	  var   oTable   =   oObj.parentNode.parentNode;   
@@ -207,9 +210,13 @@ function getSelectCheckboxValues(){
 	  }   
   }   
     
-  function   out()   
+  function   out(eventTag)   
   {   
-  var   oObj   =   event.srcElement;   
+  //var   oObj   =   event.srcElement;   
+  var event=eventTag||window.event;
+  var oObj=event.srcElement||event.target;
+  //Justin Qian 修改于2013-1-23 兼容遵守W3C DOM的FF
+
   if(oObj.tagName.toLowerCase()   ==   "td")   
   {   
   var   oTr   =   oObj.parentNode;   
@@ -218,9 +225,13 @@ function getSelectCheckboxValues(){
   }   
   }   
     
-  function   over()   
+  function   over(eventTag)   
   {   
-  var   oObj   =   event.srcElement;   
+  //var   oObj   =   event.srcElement;   
+  var event=eventTag||window.event;
+  var oObj=event.srcElement||event.target;
+  //Justin Qian 修改于2013-1-23 兼容遵守W3C DOM的FF
+
   if(oObj.tagName.toLowerCase()   ==   "td")   
   {   
   var   oTr   =   oObj.parentNode;   
