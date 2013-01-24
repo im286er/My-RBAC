@@ -36,7 +36,7 @@ class PublicAction extends Action {
         if(isset($_SESSION[C('USER_AUTH_KEY')])) {
             //显示菜单项
             $menu  = array();
-            if(isset($_SESSION['menu'.$_SESSION[C('USER_AUTH_KEY')]])) {
+            if(false && isset($_SESSION['menu'.$_SESSION[C('USER_AUTH_KEY')]])) {
                 //如果已经缓存，直接读取缓存
                 $menu   =   $_SESSION['menu'.$_SESSION[C('USER_AUTH_KEY')]];
             }else {
@@ -45,7 +45,7 @@ class PublicAction extends Action {
                 $id	=	$node->getField("id");
                 $where['level']=2;
                 $where['status']=1;
-                $where['pid']=$id;
+                //$where['pid']=$id;    
                 $list	=	$node->where($where)->field('id,name,group_id,title')->order('sort asc')->select();
                 if(isset($_SESSION['_ACCESS_LIST'])) {
                     $accessList = $_SESSION['_ACCESS_LIST'];
