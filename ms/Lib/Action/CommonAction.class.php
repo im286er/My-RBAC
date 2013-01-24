@@ -180,6 +180,10 @@ class CommonAction extends Action {
         $this->edit();
     }
 
+	function add() {
+		$this->display();
+	}
+
     function edit() {
         $name = $this->getActionName();
         $model = M($name);

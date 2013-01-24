@@ -50,6 +50,7 @@ class NodeAction extends CommonAction {
         $this->assign('level',$node->level+1);
     }
     public function _before_edit() {
+		var_dump('adadsfasdfasfasdf');
         $model	=	M("Group");
         $list	=	$model->where('status=1')->select();
         $this->assign('list',$list);
